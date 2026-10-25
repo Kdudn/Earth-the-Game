@@ -9,11 +9,13 @@ public class SelectOption : MonoBehaviour {
 	[SerializeField] private List<GameObject> selectScreens;
 	[SerializeField] private GameObject earth;
 	public Animator animator;
+	private DisableSelf parentScript;
 	private Animator earthAnimator;
 	private int currentSelect;
 
 	void Start () {
 		animator = transform.parent.gameObject.GetComponent<Animator> ();
+		parentScript = transform.parent.gameObject.GetComponent<DisableSelf> ();
 		earthAnimator = earth.GetComponent<Animator> ();
 		currentSelect = 0;
 	}
@@ -31,7 +33,7 @@ public class SelectOption : MonoBehaviour {
 	}
 
 	void inputUpdates(){
-		if (transform.parent.gameObject.activeSelf) {
+		if (transform.parent.gameObject.activeSelf && parentScript.arrival) {
 			if (Input.GetKeyDown (KeyCode.DownArrow)) {
 				currentSelect = (currentSelect + 1) % options.Count;
 			}
@@ -62,7 +64,7 @@ public class SelectOption : MonoBehaviour {
 				animator.Play ("TitleOut");
 				selectScreens [currentSelect].SetActive (true);
 				break;
-			case "Play":
+		case "Play":
 				animator.Play ("TitleOut");
 				earthAnimator.Play ("Earth Out");
 				break;

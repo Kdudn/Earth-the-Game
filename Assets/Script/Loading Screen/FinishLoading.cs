@@ -5,15 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class FinishLoading : MonoBehaviour {
 	[SerializeField] private Animator animator;
+	[SerializeField] private GameObject space;
+	private Animator spaceAnimator;
 	private float loadTime;
 
 	void Start()
 	{
+		spaceAnimator = space.GetComponent<Animator> ();
+
 		float min = 23.0f;
 		float max = 30.0f;
 
 		loadTime = UnityEngine.Random.Range(min, max);
-		StartCoroutine(ExecuteAfterDelay());
+		if (GlobalScript.currentDecade != "Inf Loading") {
+			StartCoroutine (ExecuteAfterDelay ());
+		}
+	}
+
+	void Update(){
+		inputUpdate ();
 	}
 
 	IEnumerator ExecuteAfterDelay()
@@ -24,5 +34,13 @@ public class FinishLoading : MonoBehaviour {
 
 	public void finishLoading() {
 		SceneManager.LoadScene("EarthGame");
+	}
+
+	void inputUpdate(){
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			if (GlobalScript.currentDecade == "Inf Loading") {
+				spaceAnimator.Play ("SpaceOut");
+			}
+		}
 	}
 }

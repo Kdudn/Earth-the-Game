@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DifficultySelect : MonoBehaviour {
 	private Animator animator;
+	private DisableSelf parentScript;
 	[SerializeField] private List<GameObject> difficulties;
 	[SerializeField] private GameObject selectScreen;
 	private int currentSelect;
@@ -13,6 +14,7 @@ public class DifficultySelect : MonoBehaviour {
 	void Start()
 	{
 		animator = transform.parent.gameObject.GetComponent<Animator>();
+		parentScript = transform.parent.gameObject.GetComponent<DisableSelf> ();
 		rectTransform = GetComponent<RectTransform>();
 
 		currentSelect = difficulties.FindIndex(difficulty => difficulty.name == GlobalScript.currentDifficulty);
@@ -27,21 +29,17 @@ public class DifficultySelect : MonoBehaviour {
 	}
 
 	void inputUpdate() {
-		if (transform.parent.gameObject.activeSelf) {
+		if (transform.parent.gameObject.activeSelf && parentScript.arrival) {
 			if (Input.GetKeyDown(KeyCode.DownArrow)) {
 				currentSelect = (currentSelect + 1) % difficulties.Count;
-				if (position.y < 70) {
-					position.y += 70;
-					rectTransform.anchoredPosition = position;
-				}
+				position.y = 70 * (currentSelect - 2);
+				rectTransform.anchoredPosition = position;
 			}
 
 			if (Input.GetKeyDown(KeyCode.UpArrow)) {
 				currentSelect = (currentSelect - 1 + difficulties.Count) % difficulties.Count;
-				if (position.y > -140) {
-					position.y -= 70;
-					rectTransform.anchoredPosition = position;
-				}
+				position.y = 70 * (currentSelect - 2);
+				rectTransform.anchoredPosition = position;
 			}
 
 			if (Input.GetKeyDown(KeyCode.Return)) {

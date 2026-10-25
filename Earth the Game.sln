@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Earth the Game WinXP", "Assembly-CSharp.csproj", "{6139BC3C-1481-5404-32DA-3CE928CB32D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Earth the Game", "Assembly-CSharp.csproj", "{DF1A6B99-787B-833C-5830-9FA21AA4DBB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Earth the Game", "Assembly-CSharp-Editor.csproj", "{99B1C2CC-7239-9151-953C-BFBB07C15747}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6139BC3C-1481-5404-32DA-3CE928CB32D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6139BC3C-1481-5404-32DA-3CE928CB32D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6139BC3C-1481-5404-32DA-3CE928CB32D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6139BC3C-1481-5404-32DA-3CE928CB32D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF1A6B99-787B-833C-5830-9FA21AA4DBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1A6B99-787B-833C-5830-9FA21AA4DBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1A6B99-787B-833C-5830-9FA21AA4DBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1A6B99-787B-833C-5830-9FA21AA4DBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99B1C2CC-7239-9151-953C-BFBB07C15747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99B1C2CC-7239-9151-953C-BFBB07C15747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99B1C2CC-7239-9151-953C-BFBB07C15747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99B1C2CC-7239-9151-953C-BFBB07C15747}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

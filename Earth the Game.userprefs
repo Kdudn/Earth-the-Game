@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DoubleSided.shader">
+    <Files>
+      <File FileName="Assets\Script\Select Screen\SelectOption.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Select Screen\DecadeSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\GlobalScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Loading Screen\FinishLoading.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\ChangeScene.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Select Screen\DifficultySelect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Loading Screen\RandomizeImage.cs" Line="1" Column="1" />
+      <File FileName="Assets\DoubleSided.shader" Line="42" Column="2" />
+      <File FileName="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" Line="121" Column="41" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
